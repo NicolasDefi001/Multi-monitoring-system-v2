@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Monitoring System v2</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Page 1 — Monitoring live perp/perp</h1>
+        <p>
+          Read-only. Mise à jour en temps réel bid/ask/mark/index + meilleur combo arbitrage ($ / %).
+        </p>
+        <div class="meta">
+          <span id="connection-status" class="pill neutral">Connexion...</span>
+          <span id="mode-pill" class="pill neutral">Mode</span>
+          <span id="updated-at" class="pill neutral">Dernière maj: --</span>
+        </div>
+      </header>
+
+      <section class="card">
+        <table id="dashboard-table">
+          <thead>
+            <tr>
+              <th>Ticker</th>
+              <th>Best Combo</th>
+              <th>Détails spread</th>
+              <th>Markets</th>
+            </tr>
+          </thead>
+          <tbody id="dashboard-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <template id="row-template">
+      <tr>
+        <td class="ticker"></td>
+        <td class="combo"></td>
+        <td class="spread"></td>
+        <td class="markets"></td>
+      </tr>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
